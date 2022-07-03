@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shult-Table</title>
+        <link href="./Resources/css/index.css" rel="stylesheet" type="text/css"> <!-- links the html file to the css file-->
+     <script defer src="./Resources/js/index.js"></script> <!-- links the html file to the js file-->
+    </head>
+    <body>
+        <p>How to play:</p> 
+        <p>Focus on the number in the center</p>
+        <p>Without moving your eyes, by relying on your peripheral vision.</p>
+        <p>You have to select every number through 1-25 in increasing order.</p>
+        <p>You can select a yellow number by pressing 'g' and a blue with 'h' and white with 'f'</p>
+        <p>I hope you dont cheat.</p>
+        <p>Below you can enter a username and press the button to save your highscore.</p>
+        <p>* you have to finish the shult table first</p>
+        <form id="sendHS" action="https://foodintorg.com//Nazar/Shult-Table/Resources/php/index.php" method='get'> <!-- a form used to send the user's highscore to a database-->
+            <input id='userName' name='username' placeholder='Username Here' required>
+            <input id='hs' name='highscore' class='hidden' required>
+            <input id='rn' name='rawnum' class='hidden' required>
+            <button type="submit" >Save Your HighScore</button>
+        </form>
+        <button onclick="load()">Start The Game!</button> <!-- a button that triggers the load() function which makes the shult table appear customises it and sets a timer-->
+        <div>
+    <table cellspacing = 0 id='shult'> <!-- the actual shult table-->
+        
+        <tr>
+         <td class="Shult-Num" ></td>
+         <td class="Shult-Num" ></td>
+         <td class="Shult-Num" ></td>
+         <td class="Shult-Num" ></td>
+         <td class="Shult-Num" ></td>
+        </tr>
+        <tr>
+         <td class="Shult-Num" ></td>
+         <td class="Shult-Num" ></td>
+         <td class="Shult-Num" ></td>
+         <td class="Shult-Num" ></td>
+         <td class="Shult-Num" ></td>
+        </tr>
+        <tr>
+         <td class="Shult-Num"></td>
+         <td class="Shult-Num"></td>
+         <td class="Shult-Num"></td>
+         <td class="Shult-Num"></td>
+         <td class="Shult-Num"></td>
+        </tr>
+        <tr>
+         <td class="Shult-Num"></td>
+         <td class="Shult-Num"></td>
+         <td class="Shult-Num"></td>
+         <td class="Shult-Num"></td>
+         <td class="Shult-Num"></td>
+        </tr>
+        <tr>
+         <td class="Shult-Num"></td>
+         <td class="Shult-Num"></td>
+         <td class="Shult-Num"></td>
+         <td class="Shult-Num"></td>
+         <td class="Shult-Num"></td>
+        </tr>
+    </table>  
+    </div>
+    </body>
+    
+</html>
